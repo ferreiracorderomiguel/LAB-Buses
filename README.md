@@ -12,7 +12,7 @@ Tenemos un conjunto de datos del centro de control de las líneas de autobuses i
 - **Nombre**: nombre de la línea, de tipo cadena.
 - **Empresa**: empresa propietaria del autobús, cadena que puede tomar los valores: TUSA, TNYC, USABUS y, NYBUS.
 - **Usuarios**: número total de usuarios del ese trayecto, de tipo entero. 
-- **Parada inicial**: pParada de inicio del trayecto, de tipo cadena.
+- **Parada inicial**: Parada de inicio del trayecto, de tipo cadena.
 - **Recorrido**: lista con las paradas y tiempos estimados de llegada a cada unao de ellosellas. Cada elemento de la lista representa una etapa del trayecto, y contiene los minutos que se tardan en llegar a la parada y el nombre de la parada.
 
 Por ejemplo, las dos primera líneas del fichero:
@@ -63,7 +63,7 @@ Propiedades:
 - **Recorrido**: lista con las paradas y los tiempos estimados de llegada a cada una de ellas, de tipo List<Etapa>, consultable.
 - **Número paradas**: número de paradas del trayecto (incluyendo la primera y la última), de tipo Integer, consultable. 
 - **Hora llegada**: hora de llegada a la parada final, de tipo LocalTime, consultable. 
-- **Paradas:** lista con las paradas del trayecto (incluida la parada inicial, que deberá ser la primera de la lista), de tipo List<String>, consultable. 
+- **Paradas:** lista con los nombres de las paradas del trayecto (incluida la parada inicial, que deberá ser la primera de la lista), de tipo List<String>, consultable. 
 
 Constructores: 
 
@@ -89,7 +89,7 @@ Otras operaciones:
 
 En la clase FactoriaTrayectos, que se le da parcialmente implementada, implemente el método:
 
-- *ControlTrayectos parsearTrayectos(String lineaCSV)*: crea un objeto de tipo ControlTrayecto a partir de una cadena de caracteres. La cadena de caracteres debe tener el mismo formato que las líneas del fichero CSV. Nota:.- Observe que las listas de Eetapas empiezan por el carácter “[“ y terminan por “]”. D deberáía reemplazar dichos caracteres por las cadenas vacías antes de procesarlas. 
+- *Trayecto parsearTrayectos(String lineaCSV)*: crea un objeto de tipo Trayecto a partir de una cadena de caracteres. La cadena de caracteres debe tener el mismo formato que las líneas del fichero CSV. Nota:.- Observe que las listas de Eetapas empiezan por el carácter “[“ y terminan por “]”. D deberáía reemplazar dichos caracteres por las cadenas vacías antes de procesarlas. 
 
 
 **Ejercicio 4: Tratamientos secuenciales (7 ptos)**
