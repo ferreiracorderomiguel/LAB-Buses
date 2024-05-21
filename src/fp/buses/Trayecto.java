@@ -21,7 +21,7 @@ public class Trayecto implements Comparable<Trayecto> {
 	public Trayecto(LocalDateTime fechaHora, String nombre, Empresa empresa, Integer usuarios, String paradaInicial,
 			List<Etapa> recorrido) {
 		Checkers.check("Debe haber al menos una etapa en el recorrido", recorrido.size() >= 1);
-		Checkers.check("La parada inicial no puede ser nula.", paradaInicial != null && paradaInicial.equals(""));
+		Checkers.check("La parada inicial no puede ser nula.", paradaInicial != null && !paradaInicial.equals(""));
 		this.fechaHora = fechaHora;
 		this.nombre = nombre;
 		this.empresa = empresa;
@@ -129,5 +129,11 @@ public class Trayecto implements Comparable<Trayecto> {
 		}
 		
 		return res;
+	}
+
+	@Override
+	public String toString() {
+		return "Trayecto [fechaHora=" + fechaHora + ", nombre=" + nombre + ", empresa=" + empresa + ", usuarios="
+				+ usuarios + ", paradaInicial=" + paradaInicial + ", recorrido=" + recorrido + "]";
 	}
 }

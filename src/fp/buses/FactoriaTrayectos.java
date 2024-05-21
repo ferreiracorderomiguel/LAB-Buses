@@ -57,8 +57,8 @@ public class FactoriaTrayectos {
 		
 		for(String s: trozos) {
 			String[] stringEtapa = s.split("-");
-			String parada = stringEtapa[0].trim();
-			Integer minutos = Integer.parseInt(stringEtapa[1].trim());
+			String parada = stringEtapa[1].trim();
+			Integer minutos = Integer.parseInt(stringEtapa[0].trim());
 			res.add(new Etapa(parada, minutos));
 		}
 		
